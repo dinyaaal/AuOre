@@ -97,6 +97,18 @@ body {
       overscroll-behavior: none;
 }
 
+.loaded body .hero__body {
+  -webkit-transform: translate(0) !important;
+      -ms-transform: translate(0) !important;
+          transform: translate(0) !important;
+}
+
+.loaded body .hero__decor {
+  -webkit-transform: translate(0) !important;
+      -ms-transform: translate(0) !important;
+          transform: translate(0) !important;
+}
+
 .wrapper {
   min-height: 100%;
   display: -webkit-box;
@@ -302,46 +314,6 @@ body {
   margin-bottom: 3.125rem;
 }
 
-.blue-decoration {
-  position: absolute;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-  width: 100%;
-  max-width: 396px;
-  max-height: 396px;
-  background-color: rgba(58, 185, 212, 0.15);
-  -webkit-filter: blur(100px);
-          filter: blur(100px);
-}
-
-.header {
-  background-color: var(--blackColor);
-  position: relative;
-  z-index: 999;
-}
-
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 5rem;
-}
-
-.header__logo {
-  position: relative;
-  z-index: 3;
-  font-weight: 700;
-  color: var(--blueColor);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
 .number {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,6 +366,50 @@ body {
 .socials__item svg * {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.blue-decoration {
+  position: absolute;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-width: 396px;
+  max-height: 396px;
+  background-color: rgba(58, 185, 212, 0.15);
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
+}
+
+.header {
+  background-color: var(--blackColor);
+  position: relative;
+  z-index: 999;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5rem;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 3;
+  font-weight: 700;
+  color: var(--blueColor);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.hero {
+  overflow: hidden;
 }
 
 .hero__content {
@@ -458,6 +474,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 .hero__body::before {
@@ -495,6 +515,7 @@ body {
 }
 
 .hero__text {
+  position: relative;
   z-index: 2;
   font-weight: 500;
   padding-top: 0.8125rem;
@@ -511,6 +532,10 @@ body {
   height: fit-content;
   width: 100vw;
   font-weight: 700;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
 .hero__decor img {
@@ -550,9 +575,33 @@ body {
   justify-items: center;
 }
 
-.services .stones__image {
+.services .stones__image-wrapper {
   position: relative;
   top: -50%;
+}
+
+.services .stones__image-wrapper:first-child {
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.services .stones__image-wrapper:first-child img {
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.services .stones__image-wrapper:last-child {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.services .stones__image-wrapper:last-child img {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .services .stones :nth-child(2) {
@@ -909,10 +958,6 @@ body {
     width: 100%;
   }
 
-  .header__logo:hover {
-    color: var(--blueColor-hover);
-  }
-
   .number:hover {
     color: var(--blueColor);
   }
@@ -921,8 +966,16 @@ body {
     fill: var(--blueColor);
   }
 
-  .socials__item:hover svg * {
-    stroke: var(--blueColor-hover);
+  .socials__item:hover.inst svg * {
+    stroke: var(--blueColor-hover) !important;
+  }
+
+  .socials__item:hover.facebook svg * {
+    fill: var(--blueColor-hover) !important;
+  }
+
+  .header__logo:hover {
+    color: var(--blueColor-hover);
   }
 }
 
