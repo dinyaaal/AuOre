@@ -396,7 +396,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.hero__bg {
+.hero__content {
   position: relative;
   width: 100%;
   height: 100%;
@@ -411,7 +411,7 @@ body {
           justify-content: center;
 }
 
-.hero__bg::after {
+.hero__content::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -422,6 +422,10 @@ body {
 }
 
 .hero__image {
+  width: 100%;
+}
+
+.hero__image img {
   max-height: 37.5rem;
   min-height: 28.625rem;
 }
@@ -649,7 +653,7 @@ body {
   }
 
   .hero__decor-01 {
-    left: -30%;
+    left: -26%;
   }
 
   .hero__decor-02 {
