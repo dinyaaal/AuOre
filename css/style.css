@@ -1759,6 +1759,10 @@ input[type=number] {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .services .stones :nth-child(2) {
+    top: 80%;
+  }
+
   .item-clients {
     max-width: 85%;
   }
