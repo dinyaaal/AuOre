@@ -68,7 +68,7 @@
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open");
             } else if (e.target.closest(".menu__link") && !e.target.closest(".menu__body")) {
-                bodyLockToggle();
+                bodyUnlock();
                 document.documentElement.classList.remove("menu-open");
             }
         }));
