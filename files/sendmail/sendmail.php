@@ -11,7 +11,15 @@
 	$mail->setLanguage('ru', 'phpmailer/language/');
 	$mail->IsHTML(true);
 
-
+	
+	$mail->isSMTP();                                            //Send using SMTP
+	$mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+	$mail->Username   = 'wdinyaaal@gmail.com';                     //SMTP username
+	$mail->Password   = 'scnn hhah hvdx iicz';                               //SMTP password
+	$mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+	$mail->Port       = 465;                 
+	
 
 	//Від кого лист
 	$mail->setFrom('wdinyaaal@gmail.com', 'AuOreTrade'); // Вказати потрібний E-mail
@@ -54,9 +62,9 @@
 
 	//Відправляємо
 	if (!$mail->send()) {
-		$message = 'Error';
+		$message = 'Помилка';
 	} else {
-		$message = 'Successfull';
+		$message = 'Дані надіслані!';
 	}
 
 	$response = ['message' => $message];
