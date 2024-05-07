@@ -435,11 +435,6 @@
                         let responseResult = await response.json();
                         form.classList.remove("_sending");
                         formSent(form, responseResult);
-                        const formMessage = document.getElementById("form-message");
-                        formMessage.style.transform = "scale(1)";
-                        setTimeout((function() {
-                            formMessage.style.transform = "scale(0)";
-                        }), 5e3);
                     } else {
                         alert("Error");
                         form.classList.remove("_sending");
