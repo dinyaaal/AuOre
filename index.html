@@ -1,18 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
+
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240506172416">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240507193852">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body style="background-color: #1C1C1C; opacity: 0;">
+
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
@@ -21,11 +25,11 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
-							<li class="menu__item"><a href="#clients" class="menu__link">Clients</a></li>
-							<li class="menu__item"><a href="#about-us" class="menu__link">About Us</a></li>
-							<li class="menu__item"><a href="#ore" class="menu__link">Ore</a></li>
-							<li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
+							<li class="menu__item"><a href="#" data-goto=".services" class="menu__link">Services</a></li>
+							<li class="menu__item"><a href="#" data-goto=".clients" class="menu__link">Clients</a></li>
+							<li class="menu__item"><a href="#" data-goto=".about-us" class="menu__link">About Us</a></li>
+							<li class="menu__item"><a href="#" data-goto=".ore" class="menu__link">Ore</a></li>
+							<li class="menu__item"><a href="#" data-goto=".contact" class="menu__link">Contact</a></li>
 						</ul>
 						<a href="tel:+380987654321" class="number">
 							<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +39,7 @@
 							<p>+ 38 (098) 765 43 21</p>
 						</a>
 						<div class="socials">
-							<a href="#" class="socials__item inst">
+							<a href="https://www.instagram.com/" target="_blank" class="socials__item inst">
 								<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="17.5" cy="17.5" r="17" stroke="#3AB9D4" />
 									<path d="M17.4999 21.1841C18.4771 21.1841 19.4142 20.7959 20.1051 20.105C20.796 19.4141 21.1842 18.477 21.1842 17.4999C21.1842 16.5228 20.796 15.5857 20.1051 14.8948C19.4142 14.2038 18.4771 13.8157 17.4999 13.8157C16.5228 13.8157 15.5857 14.2038 14.8948 14.8948C14.2039 15.5857 13.8157 16.5228 13.8157 17.4999C13.8157 18.477 14.2039 19.4141 14.8948 20.105C15.5857 20.7959 16.5228 21.1841 17.4999 21.1841Z" stroke="#3AB9D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -43,7 +47,7 @@
 									<path d="M22.5657 12.4441L22.5757 12.4331" stroke="#3AB9D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								</svg>
 							</a>
-							<a href="#" class="socials__item facebook">
+							<a href="https://www.facebook.com/" target="_blank" class="socials__item facebook">
 								<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M17.5 -0.0371094C7.83017 -0.0371094 -0.038269 7.82914 -0.038269 17.5001C-0.038269 27.171 7.83017 35.0373 17.5 35.0373C27.1699 35.0373 35.0383 27.171 35.0383 17.5001C35.0383 7.82914 27.1699 -0.0371094 17.5 -0.0371094ZM17.5 33.8691C8.47439 33.8691 1.13204 26.5257 1.13204 17.5001C1.13204 8.47445 8.47439 1.13102 17.5 1.13102C26.5256 1.13102 33.868 8.47445 33.868 17.5001C33.868 26.5257 26.5256 33.8691 17.5 33.8691Z" fill="#3AB9D4" />
 									<path d="M21.3281 7.65642H18.41C14.6935 7.61923 14.2188 9.91938 14.2188 12.4088V14.2189H12.5781C12.504 14.209 12.4285 14.2163 12.3577 14.2403C12.2868 14.2643 12.2224 14.3043 12.1695 14.3572C12.1166 14.4101 12.0766 14.4745 12.0527 14.5453C12.0287 14.6162 12.0214 14.6916 12.0313 14.7658V18.047C12.0214 18.1212 12.0287 18.1966 12.0527 18.2675C12.0766 18.3384 12.1166 18.4027 12.1695 18.4556C12.2224 18.5085 12.2868 18.5485 12.3577 18.5725C12.4285 18.5965 12.504 18.6038 12.5781 18.5939H14.2188V26.797C14.2096 26.8713 14.2176 26.9467 14.2421 27.0174C14.2666 27.0882 14.3069 27.1524 14.36 27.2051C14.4131 27.2579 14.4775 27.2978 14.5484 27.3219C14.6193 27.3459 14.6947 27.3535 14.7689 27.3439H18.1103C18.433 27.3811 18.6944 27.1197 18.5916 26.797L18.5938 18.5939H21.3281C21.4023 18.6038 21.4777 18.5965 21.5486 18.5725C21.6195 18.5485 21.6838 18.5085 21.7367 18.4556C21.7896 18.4027 21.8296 18.3384 21.8536 18.2675C21.8776 18.1966 21.8849 18.1212 21.875 18.047V14.7658C21.8849 14.6916 21.8776 14.6162 21.8536 14.5453C21.8296 14.4745 21.7896 14.4101 21.7367 14.3572C21.6838 14.3043 21.6195 14.2643 21.5486 14.2403C21.4777 14.2163 21.4023 14.209 21.3281 14.2189H18.5905L18.5938 12.5783C18.6999 11.8794 18.6999 11.9931 19.3485 12.0314H21.3052C21.4572 11.9975 21.6191 12.0161 21.7328 11.9056C21.8466 11.7952 21.9122 11.6442 21.8739 11.4845V8.20329C21.884 8.1292 21.8769 8.05377 21.853 7.9829C21.8292 7.91202 21.7893 7.84761 21.7365 7.79468C21.6836 7.74175 21.6193 7.70174 21.5485 7.67775C21.4777 7.65377 21.4023 7.64647 21.3281 7.65642ZM20.743 10.8764L19.3714 10.8239C17.6728 10.8239 17.5306 11.7459 17.5306 12.6899L17.5263 14.7636C17.5261 14.8404 17.5411 14.9165 17.5704 14.9874C17.5997 15.0584 17.6427 15.123 17.6969 15.1773C17.7512 15.2317 17.8156 15.2748 17.8866 15.3042C17.9575 15.3336 18.0335 15.3488 18.1103 15.3488H20.7813V17.4619H18.1125C17.9575 17.4619 17.8088 17.5234 17.6991 17.6329C17.5894 17.7424 17.5276 17.8909 17.5274 18.0459L17.5263 26.2502H15.3125V18.047C15.3125 17.7244 15.0927 17.463 14.7689 17.463H13.125V15.3499H14.7689C14.8457 15.35 14.9217 15.335 14.9926 15.3057C15.0636 15.2764 15.128 15.2334 15.1824 15.1792C15.2917 15.0688 15.3114 14.92 15.3114 14.7647V12.4077C15.3114 9.95548 15.8069 8.78735 18.4089 8.78735H20.7419L20.743 10.8764Z" fill="#3AB9D4" />
@@ -55,6 +59,7 @@
 			</div>
 		</header>
 		<main class="page">
+
 			<section id="hero" class="hero">
 
 				<div class="hero__content">
@@ -79,6 +84,9 @@
 					</div>
 				</div>
 			</section>
+			<div class="curs">
+				<script type='text/javascript' src='https://www.thefinancials.com/ShowPanel.aspx?pid=FREE&mode=js&id=96&bgcolor=003366&fontcolor=ffffff&fontsize=13&bordercolor=c0c0c0&scrollSpeedFromZeroToTen=5&_v=20240507193852'></script>
+			</div>
 			<section id="services" class="services">
 				<div class="services__container">
 					<h2 class="services__title title">Services</h2>
@@ -229,23 +237,23 @@
 			<section id="ore" class="ore">
 				<div class="ore__container">
 					<h2 class="ore__title title">Our Ores</h2>
-					<div class="ore__content">
-						<div class="ore__items">
+					<div data-showmore="items" class="ore__content">
+						<div data-showmore-content="3" class="ore__items">
 							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
 								<div class="item-ore__block">
 									<div class="item-ore__image">
-										<picture><source srcset="img/ore/01.webp" type="image/webp"><img src="img/ore/01.jpg" alt="Image"></picture>
+										<picture><source srcset="img/ore/Aluminum.webp" type="image/webp"><img src="img/ore/Aluminum.jpg" alt="Image"></picture>
 									</div>
 								</div>
 								<div class="item-ore__body">
 									<div class="item-ore__wrapper">
-										<div class="item-ore__title">Iron ore</div>
+										<div class="item-ore__title">Aluminum</div>
 										<div class="item-ore__text">
 											<p>
-												Iron ore is a natural mineral resource containing high concentrations of iron and other beneficial impurities. It is the main source of raw materials for the production of steel, one of the most important building materials and materials for the production of many industrial products.
+												Aluminum is a lightweight, strong and versatile metal that is widely used in a variety of industrial and manufacturing applications. With its high thermal and electrical conductivity, aluminum is an important building material used for aircraft, automotive, and shipbuilding structures, as well as packaging, electronics, and home appliances.
 											</p>
 											<p>
-												Iron ore plays a key role in the steel industry as it serves as the main source of raw material for steel production. Steel is widely used in construction, engineering, vehicle manufacturing and many other industries, making iron ore an important element of the global economy.
+												Aluminum is also attractive because of its resistance to corrosion, making it an ideal material for use in high humidity or corrosive environments. In addition, aluminum can be easily recycled, helping to reduce environmental impact and energy costs in production.
 											</p>
 										</div>
 									</div>
@@ -254,7 +262,7 @@
 							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--right">
 								<div class="item-ore__block">
 									<div class="item-ore__image">
-										<picture><source srcset="img/ore/02.webp" type="image/webp"><img src="img/ore/02.jpg" alt="Image"></picture>
+										<picture><source srcset="img/ore/Iron-ore.webp" type="image/webp"><img src="img/ore/Iron-ore.jpg" alt="Image"></picture>
 									</div>
 								</div>
 								<div class="item-ore__body">
@@ -274,25 +282,327 @@
 							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
 								<div class="item-ore__block">
 									<div class="item-ore__image">
-										<picture><source srcset="img/ore/03.webp" type="image/webp"><img src="img/ore/03.jpg" alt="Image"></picture>
+										<picture><source srcset="img/ore/Iron-sludge.webp" type="image/webp"><img src="img/ore/Iron-sludge.jpg" alt="Image"></picture>
 									</div>
 								</div>
 								<div class="item-ore__body">
 									<div class="item-ore__wrapper">
-										<div class="item-ore__title">Iron ore</div>
+
+										<div class="item-ore__title">Iron sludge</div>
 										<div class="item-ore__text">
 											<p>
-												Iron ore is a natural mineral resource containing high concentrations of iron and other beneficial impurities. It is the main source of raw materials for the production of steel, one of the most important building materials and materials for the production of many industrial products.
+												Iron sludge is a by-product of metallurgical production resulting from the beneficiation of iron ore. This slurry contains various impurities and residues from ore processing processes.
 											</p>
 											<p>
-												Iron ore plays a key role in the steel industry as it serves as the main source of raw material for steel production. Steel is widely used in construction, engineering, vehicle manufacturing and many other industries, making iron ore an important element of the global economy.
+												Although iron sludge is a waste product, it can be further processed to extract additional valuable components or used in other industries such as construction or cement production.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--right">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Iron-sludge.webp" type="image/webp"><img src="img/ore/Iron-sludge.jpg" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Iron concentrate</div>
+										<div class="item-ore__text">
+											<p>
+												Iron concentrate is a product of iron ore beneficiation containing a high concentration of iron.
+											</p>
+											<p>
+												This product is obtained after the processes of crushing, grinding and beneficiation of iron ore. Iron concentrate is an important source of raw material for steel production.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Gold-ore.webp" type="image/webp"><img src="img/ore/Gold-ore.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Gold ore</div>
+										<div class="item-ore__text">
+											<p>
+												Gold ore is a natural material containing gold in varying proportions. Typically, gold ore is found as metallic veins or phenocrysts in rocks and sediments. This valuable resource is mined and processed to extract gold, one of the most valuable metals in the world.
+											</p>
+											<p>
+												Gold ore has a wide range of uses, from jewelry production to industrial and process applications. Its unique chemical and physical properties make gold in demand in a variety of industries, including jewelry, electronics, medicine and industrial manufacturing.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--right">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Copper-ore.webp" type="image/webp"><img src="img/ore/Copper-ore.jpg" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Copper ore</div>
+										<div class="item-ore__text">
+											<p>
+												Copper ore is a valuable natural material containing copper. It is extracted from the earth and used in various industrial processes to create copper alloys.
+											</p>
+											<p>
+												It is highly valuable due to its unique chemical properties and wide range of industrial and technological applications.
+
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Copper-concentrate.webp" type="image/webp"><img src="img/ore/Copper-concentrate.jpg" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Copper concentrate</div>
+										<div class="item-ore__text">
+											<p>
+												Copper concentrate is a valuable product obtained from the beneficiation of copper ore. This concentrate contains a high concentration of copper and other valuable metals after passing through various technological processes.
+											</p>
+											Copper concentrate is a key step in the production of copper and its alloys. After further processing and refining, it is converted into high quality copper products used in various industries.
+											<p>
+												Due to its high copper concentration, copper concentrate is an efficient and economically valuable source of raw material for the production of copper alloys. Its wide application in various industries makes it an important component in the global economy and industry.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--right">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Copper-sludge.webp" type="image/webp"><img src="img/ore/Copper-sludge.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Copper sludge</div>
+										<div class="item-ore__text">
+											<p>
+												Copper sludge is a by-product of copper production, resulting from the technological processes of cleaning and processing of copper ore. With varying chemical composition and physical properties, copper slurry is a mixture of fine particles containing residual metallic and non-metallic elements.
+											</p>
+											<p>
+												Although copper sludge is a waste product from copper production, it also has potential for use in a variety of industrial processes. In some cases, it can be recycled to extract additional valuable metals or used as a raw material for the production of building materials or fertilizers.
+
+											</p>
+											<p>
+												Effective management and treatment of copper sludge is important to meet environmental standards and minimize negative environmental impacts. Modern processing technologies maximize resource utilization and reduce the environmental impact of production processes.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Nickel-ore.webp" type="image/webp"><img src="img/ore/Nickel-ore.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Nickel ore</div>
+										<div class="item-ore__text">
+											<p>
+												Nickel ore is a natural mineral resource containing high concentrations of nickel in combination with other metals such as iron, sulfur and copper. It is an important source of nickel, which is used in a variety of industries including stainless steel, alloys, electronics and chemicals.
+											</p>
+
+											<p>
+												Nickel ore is important to many industries. Nickel is used in the production of stainless steel, which is widely used in the construction, automotive and aerospace industries. It is also used to create alloys that have high strength and corrosion resistance, making them ideal for specialized applications such as pipelines, chemical reactors, and oil and gas equipment.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--right">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Nickel-concentrate.webp" type="image/webp"><img src="img/ore/Nickel-concentrate.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Nickel concentrate</div>
+										<div class="item-ore__text">
+											<p>
+
+												Nickel concentrate is a product of nickel ore enrichment containing a high concentration of nickel and other valuable metals. It is obtained after the ore passes through crushing, grinding and flotation processes.
+											</p>
+
+											<p>
+												Nickel concentrate is further used to produce nickel alloys and other products.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Platinum-ore.webp" type="image/webp"><img src="img/ore/Platinum-ore.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Platinum ore</div>
+										<div class="item-ore__text">
+											<p>
+												Platinum ore is a natural mineral resource containing high concentrations of platinum and other platinum metals such as palladium, rhodium, and their compounds. Platinum is one of the rarest and most valuable metals on the planet and finds applications in a variety of industries and technologies.
+											</p>
+
+											<p>
+												Platinum has many applications in industry and technology. It is used as a catalyst in the chemical industry, jewelry manufacturing, electronics, automotive, medicine and other industries. Rhodium and palladium, which are also found in platinum ore, are widely used in the production of automotive catalysts and in jewelry.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--right">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Lead-ore.webp" type="image/webp"><img src="img/ore/Lead-ore.jpg" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Lead ore</div>
+										<div class="item-ore__text">
+											<p>
+												Lead ore is a natural mineral resource containing high concentrations of lead, which is an important metal for many industries. Lead is widely used in battery manufacturing, cable manufacturing, construction, tin production, and other applications.
+											</p>
+
+											<p>
+												Lead has a wide range of applications. It is used in the production of automobile batteries, making it a key component in the automotive industry. Lead is also used in the cable industry to produce electrical cables and wires, and in construction, where it is used to create protective layers against radiation and noise.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Lead-concentrate.webp" type="image/webp"><img src="img/ore/Lead-concentrate.jpg" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Lead concentrate</div>
+										<div class="item-ore__text">
+											<p>
+												Lead concentrate is a product of lead ore beneficiation containing a high concentration of lead after going through crushing, grinding and flotation processes. The resulting concentrate is a key source of raw material for further production of lead alloys and other products.
+											</p>
+
+											<p>
+
+												Lead concentrate has a wide range of applications. It is used in the metallurgical industry to produce lead alloys such as tin alloy, which is used in the manufacture of batteries. Lead concentrate can also be used in other applications such as the manufacture of cables, protective coatings and other products.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Silver-ore.webp" type="image/webp"><img src="img/ore/Silver-ore.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Silver ore</div>
+										<div class="item-ore__text">
+											<p>
+												Silver ore is a natural mineral containing high concentrations of silver in combination with other metals and minerals. It is the primary source of raw materials for mining silver, one of the most valuable precious metals.
+											</p>
+
+											<p>
+												Silver is widely used in a variety of industries and manufacturing, including jewelry, electronics, photography, medicine, and others. It is also used as an investment asset. Therefore, silver ore plays an important role in the global economy and industry.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--right">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Titanium-ore.webp" type="image/webp"><img src="img/ore/Titanium-ore.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Titanium ore</div>
+										<div class="item-ore__text">
+											<p>
+												Titanium ore is a natural mineral resource containing high concentrations of titanium, which is a strategically important metal in many industries. Titanium has high strength, lightness and corrosion resistance, making it a valuable material for a variety of applications.
+											</p>
+
+											<p>
+
+												Titanium is widely used in the aviation, space, automotive, chemical and medical industries. It is used in the production of lightweight and strong alloys used to create aircraft, automobiles, and medical equipment. Titanium is also used in the manufacture of spacecraft, as well as in the chemical industry to create catalysts and other specialized products.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--left">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Zinc-ore.webp" type="image/webp"><img src="img/ore/Zinc-ore.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Zinc ore</div>
+										<div class="item-ore__text">
+											<p>
+												Zinc ore is a natural mineral resource containing high concentrations of zinc in combination with other metals and minerals. Zinc is an important element for many industries, used in the production of galvanized steel, batteries, pharmaceuticals, cosmetics and other products.
+											</p>
+
+											<p>
+												Zinc plays an important role in modern industry due to its unique characteristics. It is used in electroplating for corrosion protection, in the production of pharmaceuticals and cosmetics, and in the production of alloys used in the automotive and electrical industries.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-watch data-watch-once data-watch-threshold="0.5" class="ore__item item-ore item-ore--right">
+								<div class="item-ore__block">
+									<div class="item-ore__image">
+										<picture><source srcset="img/ore/Zinc-concentrate.webp" type="image/webp"><img src="img/ore/Zinc-concentrate.JPG" alt="Image"></picture>
+									</div>
+								</div>
+								<div class="item-ore__body">
+									<div class="item-ore__wrapper">
+										<div class="item-ore__title">Zinc concentrate</div>
+										<div class="item-ore__text">
+											<p>
+												Zinc concentrate is a product of zinc ore beneficiation containing high concentration of zinc after passing through crushing, grinding and flotation processes. The resulting concentrate is a high zinc content material, which is an important source of raw material for further processing.
+											</p>
+
+											<p>
+												Zinc concentrate is used in the metallurgical industry to produce zinc and its alloys. This material may be smelted or subjected to other treatment processes to extract zinc and produce end products such as galvanized steel, foundry alloys or chemical compounds.
 											</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<button class="ore__button button">Check price</button>
+						<button hidden data-showmore-button="1000" type="button" class="block__more button">
+							<span>Show more</span>
+							<span>Show less</span>
+						</button>
 						<div class="decorations">
 							<div class="blue-decoration"></div>
 							<div class="blue-decoration"></div>
@@ -317,7 +627,7 @@
 								<p>+ 38 (098) 765 43 21</p>
 							</a>
 							<div class="socials">
-								<a href="#" class="socials__item inst">
+								<a href="https://www.instagram.com/" target="_blank" class="socials__item inst">
 									<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<circle cx="17.5" cy="17.5" r="17" stroke="#3AB9D4" />
 										<path d="M17.4999 21.1841C18.4771 21.1841 19.4142 20.7959 20.1051 20.105C20.796 19.4141 21.1842 18.477 21.1842 17.4999C21.1842 16.5228 20.796 15.5857 20.1051 14.8948C19.4142 14.2038 18.4771 13.8157 17.4999 13.8157C16.5228 13.8157 15.5857 14.2038 14.8948 14.8948C14.2039 15.5857 13.8157 16.5228 13.8157 17.4999C13.8157 18.477 14.2039 19.4141 14.8948 20.105C15.5857 20.7959 16.5228 21.1841 17.4999 21.1841Z" stroke="#3AB9D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -325,7 +635,7 @@
 										<path d="M22.5657 12.4441L22.5757 12.4331" stroke="#3AB9D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
 								</a>
-								<a href="#" class="socials__item facebook">
+								<a href="https://www.facebook.com/" target="_blank" class="socials__item facebook">
 									<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M17.5 -0.0371094C7.83017 -0.0371094 -0.038269 7.82914 -0.038269 17.5001C-0.038269 27.171 7.83017 35.0373 17.5 35.0373C27.1699 35.0373 35.0383 27.171 35.0383 17.5001C35.0383 7.82914 27.1699 -0.0371094 17.5 -0.0371094ZM17.5 33.8691C8.47439 33.8691 1.13204 26.5257 1.13204 17.5001C1.13204 8.47445 8.47439 1.13102 17.5 1.13102C26.5256 1.13102 33.868 8.47445 33.868 17.5001C33.868 26.5257 26.5256 33.8691 17.5 33.8691Z" fill="#3AB9D4" />
 										<path d="M21.3281 7.65642H18.41C14.6935 7.61923 14.2188 9.91938 14.2188 12.4088V14.2189H12.5781C12.504 14.209 12.4285 14.2163 12.3577 14.2403C12.2868 14.2643 12.2224 14.3043 12.1695 14.3572C12.1166 14.4101 12.0766 14.4745 12.0527 14.5453C12.0287 14.6162 12.0214 14.6916 12.0313 14.7658V18.047C12.0214 18.1212 12.0287 18.1966 12.0527 18.2675C12.0766 18.3384 12.1166 18.4027 12.1695 18.4556C12.2224 18.5085 12.2868 18.5485 12.3577 18.5725C12.4285 18.5965 12.504 18.6038 12.5781 18.5939H14.2188V26.797C14.2096 26.8713 14.2176 26.9467 14.2421 27.0174C14.2666 27.0882 14.3069 27.1524 14.36 27.2051C14.4131 27.2579 14.4775 27.2978 14.5484 27.3219C14.6193 27.3459 14.6947 27.3535 14.7689 27.3439H18.1103C18.433 27.3811 18.6944 27.1197 18.5916 26.797L18.5938 18.5939H21.3281C21.4023 18.6038 21.4777 18.5965 21.5486 18.5725C21.6195 18.5485 21.6838 18.5085 21.7367 18.4556C21.7896 18.4027 21.8296 18.3384 21.8536 18.2675C21.8776 18.1966 21.8849 18.1212 21.875 18.047V14.7658C21.8849 14.6916 21.8776 14.6162 21.8536 14.5453C21.8296 14.4745 21.7896 14.4101 21.7367 14.3572C21.6838 14.3043 21.6195 14.2643 21.5486 14.2403C21.4777 14.2163 21.4023 14.209 21.3281 14.2189H18.5905L18.5938 12.5783C18.6999 11.8794 18.6999 11.9931 19.3485 12.0314H21.3052C21.4572 11.9975 21.6191 12.0161 21.7328 11.9056C21.8466 11.7952 21.9122 11.6442 21.8739 11.4845V8.20329C21.884 8.1292 21.8769 8.05377 21.853 7.9829C21.8292 7.91202 21.7893 7.84761 21.7365 7.79468C21.6836 7.74175 21.6193 7.70174 21.5485 7.67775C21.4777 7.65377 21.4023 7.64647 21.3281 7.65642ZM20.743 10.8764L19.3714 10.8239C17.6728 10.8239 17.5306 11.7459 17.5306 12.6899L17.5263 14.7636C17.5261 14.8404 17.5411 14.9165 17.5704 14.9874C17.5997 15.0584 17.6427 15.123 17.6969 15.1773C17.7512 15.2317 17.8156 15.2748 17.8866 15.3042C17.9575 15.3336 18.0335 15.3488 18.1103 15.3488H20.7813V17.4619H18.1125C17.9575 17.4619 17.8088 17.5234 17.6991 17.6329C17.5894 17.7424 17.5276 17.8909 17.5274 18.0459L17.5263 26.2502H15.3125V18.047C15.3125 17.7244 15.0927 17.463 14.7689 17.463H13.125V15.3499H14.7689C14.8457 15.35 14.9217 15.335 14.9926 15.3057C15.0636 15.2764 15.128 15.2334 15.1824 15.1792C15.2917 15.0688 15.3114 14.92 15.3114 14.7647V12.4077C15.3114 9.95548 15.8069 8.78735 18.4089 8.78735H20.7419L20.743 10.8764Z" fill="#3AB9D4" />
@@ -342,15 +652,22 @@
 								<h2 class="form-contact__title title">Contact Us</h2>
 								<p>Write to us and we will help you</p>
 							</div>
-							<form class="form-contact__content">
+
+							<form id="form" data-ajax data-popup-message="#form-message" action="files/sendmail/sendmail.php" method="POST" class="form-contact__content">
 								<div class="form-contact__block">
-									<input type="text" placeholder="Name" class="form-contact__input input">
-									<input type="email" placeholder="Email" class="form-contact__input input">
-									<input type="number" placeholder="Number" class="form-contact__input input">
-									<textarea placeholder="Text" class="form-contact__input input input-text"></textarea>
+									<input type="text" name="name" data-required placeholder="Name" class="form-contact__input input">
+									<input type="email" name="email" data-required placeholder="Email" class="form-contact__input input">
+									<input type="number" name="number" data-required placeholder="Number" class="form-contact__input input">
+									<textarea placeholder="Text" name="message" data-required class="form-contact__input input input-text"></textarea>
 								</div>
 								<button type="submit" class="form-contact__button button">Send a massage</button>
 							</form>
+
+							<div id="form-message">
+
+								<h2 class="title">Successfully!</h2>
+								<p>Your message has been sent. Our manager will contact you shortly.</p>
+							</div>
 						</div>
 					</div>
 
@@ -375,6 +692,7 @@
 					</div>
 				</div>
 			</section>
+
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -386,11 +704,11 @@
 						<div class="footer__menu">
 							<p class="footer__title">Information</p>
 							<ul class="footer__list">
-								<li class="menu__item"><a href="#services" class="menu__link">Services</a></li>
-								<li class="menu__item"><a href="#clients" class="menu__link">Clients</a></li>
-								<li class="menu__item"><a href="#about-us" class="menu__link">About Us</a></li>
-								<li class="menu__item"><a href="#ore" class="menu__link">Ore</a></li>
-								<li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
+								<li class="menu__item"><a href="#" data-goto=".services" class="menu__link">Services</a></li>
+								<li class="menu__item"><a href="#" data-goto=".clients" class="menu__link">Clients</a></li>
+								<li class="menu__item"><a href="#" data-goto=".about-us" class="menu__link">About Us</a></li>
+								<li class="menu__item"><a href="#" data-goto=".ore" class="menu__link">Ore</a></li>
+								<li class="menu__item"><a href="#" data-goto=".contact" class="menu__link">Contact</a></li>
 							</ul>
 
 						</div>
@@ -405,7 +723,7 @@
 									<p>+ 38 (098) 765 43 21</p>
 								</a>
 								<div class="socials">
-									<a href="#" class="socials__item inst">
+									<a href="https://www.instagram.com/" target="_blank" class="socials__item inst">
 										<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<circle cx="17.5" cy="17.5" r="17" stroke="#3AB9D4" />
 											<path d="M17.4999 21.1841C18.4771 21.1841 19.4142 20.7959 20.1051 20.105C20.796 19.4141 21.1842 18.477 21.1842 17.4999C21.1842 16.5228 20.796 15.5857 20.1051 14.8948C19.4142 14.2038 18.4771 13.8157 17.4999 13.8157C16.5228 13.8157 15.5857 14.2038 14.8948 14.8948C14.2039 15.5857 13.8157 16.5228 13.8157 17.4999C13.8157 18.477 14.2039 19.4141 14.8948 20.105C15.5857 20.7959 16.5228 21.1841 17.4999 21.1841Z" stroke="#3AB9D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -413,7 +731,7 @@
 											<path d="M22.5657 12.4441L22.5757 12.4331" stroke="#3AB9D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 										</svg>
 									</a>
-									<a href="#" class="socials__item facebook">
+									<a href="https://www.facebook.com/" target="_blank" class="socials__item facebook">
 										<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M17.5 -0.0371094C7.83017 -0.0371094 -0.038269 7.82914 -0.038269 17.5001C-0.038269 27.171 7.83017 35.0373 17.5 35.0373C27.1699 35.0373 35.0383 27.171 35.0383 17.5001C35.0383 7.82914 27.1699 -0.0371094 17.5 -0.0371094ZM17.5 33.8691C8.47439 33.8691 1.13204 26.5257 1.13204 17.5001C1.13204 8.47445 8.47439 1.13102 17.5 1.13102C26.5256 1.13102 33.868 8.47445 33.868 17.5001C33.868 26.5257 26.5256 33.8691 17.5 33.8691Z" fill="#3AB9D4" />
 											<path d="M21.3281 7.65642H18.41C14.6935 7.61923 14.2188 9.91938 14.2188 12.4088V14.2189H12.5781C12.504 14.209 12.4285 14.2163 12.3577 14.2403C12.2868 14.2643 12.2224 14.3043 12.1695 14.3572C12.1166 14.4101 12.0766 14.4745 12.0527 14.5453C12.0287 14.6162 12.0214 14.6916 12.0313 14.7658V18.047C12.0214 18.1212 12.0287 18.1966 12.0527 18.2675C12.0766 18.3384 12.1166 18.4027 12.1695 18.4556C12.2224 18.5085 12.2868 18.5485 12.3577 18.5725C12.4285 18.5965 12.504 18.6038 12.5781 18.5939H14.2188V26.797C14.2096 26.8713 14.2176 26.9467 14.2421 27.0174C14.2666 27.0882 14.3069 27.1524 14.36 27.2051C14.4131 27.2579 14.4775 27.2978 14.5484 27.3219C14.6193 27.3459 14.6947 27.3535 14.7689 27.3439H18.1103C18.433 27.3811 18.6944 27.1197 18.5916 26.797L18.5938 18.5939H21.3281C21.4023 18.6038 21.4777 18.5965 21.5486 18.5725C21.6195 18.5485 21.6838 18.5085 21.7367 18.4556C21.7896 18.4027 21.8296 18.3384 21.8536 18.2675C21.8776 18.1966 21.8849 18.1212 21.875 18.047V14.7658C21.8849 14.6916 21.8776 14.6162 21.8536 14.5453C21.8296 14.4745 21.7896 14.4101 21.7367 14.3572C21.6838 14.3043 21.6195 14.2643 21.5486 14.2403C21.4777 14.2163 21.4023 14.209 21.3281 14.2189H18.5905L18.5938 12.5783C18.6999 11.8794 18.6999 11.9931 19.3485 12.0314H21.3052C21.4572 11.9975 21.6191 12.0161 21.7328 11.9056C21.8466 11.7952 21.9122 11.6442 21.8739 11.4845V8.20329C21.884 8.1292 21.8769 8.05377 21.853 7.9829C21.8292 7.91202 21.7893 7.84761 21.7365 7.79468C21.6836 7.74175 21.6193 7.70174 21.5485 7.67775C21.4777 7.65377 21.4023 7.64647 21.3281 7.65642ZM20.743 10.8764L19.3714 10.8239C17.6728 10.8239 17.5306 11.7459 17.5306 12.6899L17.5263 14.7636C17.5261 14.8404 17.5411 14.9165 17.5704 14.9874C17.5997 15.0584 17.6427 15.123 17.6969 15.1773C17.7512 15.2317 17.8156 15.2748 17.8866 15.3042C17.9575 15.3336 18.0335 15.3488 18.1103 15.3488H20.7813V17.4619H18.1125C17.9575 17.4619 17.8088 17.5234 17.6991 17.6329C17.5894 17.7424 17.5276 17.8909 17.5274 18.0459L17.5263 26.2502H15.3125V18.047C15.3125 17.7244 15.0927 17.463 14.7689 17.463H13.125V15.3499H14.7689C14.8457 15.35 14.9217 15.335 14.9926 15.3057C15.0636 15.2764 15.128 15.2334 15.1824 15.1792C15.2917 15.0688 15.3114 14.92 15.3114 14.7647V12.4077C15.3114 9.95548 15.8069 8.78735 18.4089 8.78735H20.7419L20.743 10.8764Z" fill="#3AB9D4" />
@@ -428,7 +746,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240506172416"></script>
+	<script src="js/app.min.js?_v=20240507193852"></script>
 
 </body>
 

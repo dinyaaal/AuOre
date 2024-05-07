@@ -87,6 +87,8 @@ h6 {
 body {
   background-color: var(--blackColor);
   color: var(--textColor);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .lock body {
@@ -95,6 +97,10 @@ body {
       touch-action: none;
   -ms-scroll-chaining: none;
       overscroll-behavior: none;
+}
+
+.loaded body {
+  opacity: 1 !important;
 }
 
 .loaded body .hero__body {
@@ -111,6 +117,19 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--blueColor);
+  border-radius: 20px;
 }
 
 .wrapper {
@@ -174,6 +193,10 @@ textarea {
   color: #fff;
   font-size: 0.9375rem;
   caret-color: var(--blueColor-hover);
+}
+
+.input._form-error {
+  outline: 1px solid rgb(114, 8, 8) !important;
 }
 
 .input::-webkit-input-placeholder {
@@ -278,7 +301,6 @@ input[type=number] {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  pointer-events: none;
 }
 
 .menu-open .menu::before {
@@ -397,6 +419,18 @@ input[type=number] {
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+[data-showmore-button] span:last-child {
+  display: none;
+}
+
+._showmore-active [data-showmore-button] span {
+  display: none;
+}
+
+._showmore-active [data-showmore-button] span:last-child {
+  display: block;
 }
 
 .ibg {
@@ -690,6 +724,21 @@ input[type=number] {
 .footer__title:not(:last-child) {
   margin-bottom: 1.5625rem;
   font-weight: 600;
+}
+
+.curs {
+  position: relative;
+  width: 100%;
+  height: 75.6px;
+  z-index: 2;
+}
+
+.curs .quotes {
+  background-color: var(--blackColor) !important;
+}
+
+.curs #scrollingText {
+  z-index: 999 !important;
 }
 
 .hero {
@@ -1058,7 +1107,7 @@ input[type=number] {
 }
 
 .clients .stones__image-wrapper:last-child {
-  top: 50%;
+  top: 80%;
   -webkit-transform: rotate(-80deg);
       -ms-transform: rotate(-80deg);
           transform: rotate(-80deg);
@@ -1077,6 +1126,7 @@ input[type=number] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 100%;
 }
 
 .item-clients._watcher-view .item-clients__body {
@@ -1103,7 +1153,7 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 100vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1112,10 +1162,11 @@ input[type=number] {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0.3125rem 0;
-  max-width: 40%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  max-width: 35%;
+  /* 432/1480 */
 }
 
 .item-clients__title {
@@ -1126,7 +1177,6 @@ input[type=number] {
 .item-clients__number {
   margin: 0 0 0 auto;
   font-weight: 700;
-  font-size: 6.8vw;
   color: rgba(218, 247, 254, 0.3);
 }
 
@@ -1272,6 +1322,10 @@ input[type=number] {
   font-weight: 500;
 }
 
+.ore .button {
+  margin: 0 auto;
+}
+
 .ore__content {
   position: relative;
   display: -webkit-box;
@@ -1341,6 +1395,10 @@ input[type=number] {
           align-items: center;
 }
 
+.item-ore--left {
+  margin: 0 auto 0 0;
+}
+
 .item-ore--left._watcher-view .item-ore__block {
   -webkit-transform: translate(0);
       -ms-transform: translate(0);
@@ -1397,6 +1455,9 @@ input[type=number] {
 }
 
 .item-ore__block {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   width: 100%;
   height: 100%;
   position: relative;
@@ -1429,7 +1490,7 @@ input[type=number] {
 }
 
 .item-ore__image {
-  width: 100%;
+  width: 14.0625rem;
   height: 100%;
   min-width: 14.0625rem;
   max-width: 14.0625rem;
@@ -1669,6 +1730,47 @@ input[type=number] {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-contact__body #form-message {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #393838 0%, #232323 63.27%);
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form-contact__body #form-message .title {
+  color: var(--blueColor);
+}
+
+.form-contact__body #form-message p {
+  line-height: 160%;
+  /* 19.5/16 */
+  max-width: 21.875rem;
 }
 
 .form-contact__top {
@@ -1734,11 +1836,6 @@ input[type=number] {
   .item-clients {
     max-width: 90%;
   }
-
-  .item-clients__body {
-    max-width: 35%;
-    /* 432/1480 */
-  }
 }
 
 @media (min-width: 47.99875em) {
@@ -1802,6 +1899,7 @@ input[type=number] {
   }
 
   .item-ore__image {
+    width: 23.4375rem;
     max-width: 23.4375rem;
     max-height: 23.4375rem;
   }
@@ -1932,8 +2030,16 @@ input[type=number] {
     padding-right: 2.5rem;
   }
 
+  .item-clients__body {
+    max-width: 31.25rem;
+  }
+
   .item-clients__title {
     font-size: 1rem;
+  }
+
+  .item-clients__number {
+    font-size: 6.25rem;
   }
 
   .item-clients__text {
@@ -1941,11 +2047,11 @@ input[type=number] {
   }
 
   .item-clients--left .item-clients__body {
-    padding-right: 2.5rem;
+    padding-right: 3.75rem;
   }
 
   .item-clients--right .item-clients__body {
-    padding-left: 2.5rem;
+    padding-left: 3.75rem;
   }
 
   .about-us {
@@ -2052,6 +2158,10 @@ input[type=number] {
 
   .item-clients__title {
     font-size: 0.625rem;
+  }
+
+  .item-clients__number {
+    font-size: 1.125rem;
   }
 
   .item-clients__text {
@@ -2394,6 +2504,18 @@ input[type=number] {
     }
 }
 
+@supports (font-size: clamp( 1.125rem , -0.5315656566rem  +  8.2828282828vw , 6.25rem )) {
+    .item-clients__number {
+      font-size: clamp( 1.125rem , -0.5315656566rem  +  8.2828282828vw , 6.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , -0.5315656566rem  +  8.2828282828vw , 6.25rem )) {
+    .item-clients__number {
+      font-size: calc(1.125rem + 5.125 * (100vw - 20rem) / 61.875);
+    }
+}
+
 @supports (font-size: clamp( 0.625rem , 0.5037878788rem  +  0.6060606061vw , 1rem )) {
     .item-clients__text {
       font-size: clamp( 0.625rem , 0.5037878788rem  +  0.6060606061vw , 1rem );
@@ -2406,27 +2528,27 @@ input[type=number] {
     }
 }
 
-@supports (padding-right: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem )) {
+@supports (padding-right: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem )) {
     .item-clients--left .item-clients__body {
-      padding-right: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem );
+      padding-right: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem );
     }
 }
 
-@supports not (padding-right: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem )) {
+@supports not (padding-right: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem )) {
     .item-clients--left .item-clients__body {
-      padding-right: calc(1.25rem + 1.25 * (100vw - 20rem) / 61.875);
+      padding-right: calc(1.25rem + 2.5 * (100vw - 20rem) / 61.875);
     }
 }
 
-@supports (padding-left: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem )) {
+@supports (padding-left: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem )) {
     .item-clients--right .item-clients__body {
-      padding-left: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem );
+      padding-left: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem );
     }
 }
 
-@supports not (padding-left: clamp( 1.25rem , 0.845959596rem  +  2.0202020202vw , 2.5rem )) {
+@supports not (padding-left: clamp( 1.25rem , 0.4419191919rem  +  4.0404040404vw , 3.75rem )) {
     .item-clients--right .item-clients__body {
-      padding-left: calc(1.25rem + 1.25 * (100vw - 20rem) / 61.875);
+      padding-left: calc(1.25rem + 2.5 * (100vw - 20rem) / 61.875);
     }
 }
 
