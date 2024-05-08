@@ -133,10 +133,7 @@
             if (bodyLockStatus && e.target.closest(".icon-menu")) {
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open");
-            } else if (document.documentElement.classList.contains("menu-open") && bodyLockStatus) {
-                bodyLockToggle();
-                document.documentElement.classList.toggle("menu-open");
-            } else if (e.target.closest(".menu__link") && !e.target.closest(".menu__body")) {
+            } else if (document.documentElement.classList.contains("menu-open") && bodyLockStatus && !e.target.closest(".menu__body")) {
                 bodyUnlock();
                 document.documentElement.classList.remove("menu-open");
             }
@@ -239,7 +236,7 @@
                         const showMoreButton = targetEvent.closest("[data-showmore-button]");
                         const showMoreBlock = showMoreButton.closest("[data-showmore]");
                         const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
-                        const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
+                        const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "1000";
                         const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
                         if (!showMoreContent.classList.contains("_slide")) {
                             showMoreBlock.classList.contains("_showmore-active") ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
@@ -435,6 +432,11 @@
                         let responseResult = await response.json();
                         form.classList.remove("_sending");
                         formSent(form, responseResult);
+                        const formMessage = document.getElementById("form-message");
+                        formMessage.style.transform = "scale(1)";
+                        setTimeout((function() {
+                            formMessage.style.transform = "scale(0)";
+                        }), 3e3);
                     } else {
                         alert("Error");
                         form.classList.remove("_sending");
@@ -6151,6 +6153,17 @@
             scrub: true
         }
     });
+    document.addEventListener("DOMContentLoaded", (function() {
+        const langTitleBody = document.querySelector(".select-lang__title");
+        const langTitle = document.querySelector(".select-lang__title p");
+        const langBody = document.querySelector(".select-lang__body");
+        langTitleBody.addEventListener("click", (function() {
+            langBody.classList.toggle("active");
+        }));
+        document.addEventListener("click", (function(event) {
+            if (!langTitleBody.contains(event.target) && event.target !== langTitle) langBody.classList.remove("active");
+        }));
+    }));
     window["FLS"] = 0;
     isWebp();
     addLoadedClass();
