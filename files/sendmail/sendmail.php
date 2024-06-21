@@ -11,20 +11,20 @@
 	$mail->setLanguage('ru', 'phpmailer/language/');
 	$mail->IsHTML(true);
 
-	/*
+	
 	$mail->isSMTP();                                            //Send using SMTP
 	$mail->Host       = 'aaaaaa';                     //Set the SMTP server to send through
 	$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-	$mail->Username   = 'aaaaaa';                     //SMTP username
+	$mail->Username   = 'info@global-tc.pl';                     //SMTP username
 	$mail->Password   = 'aaaaaa';                               //SMTP password
 	$mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
 	$mail->Port       = 465;                 
-	*/
+	
 
 	//Від кого лист
-	$mail->setFrom('info@auoretrade.com', 'AuOreTrade'); // Вказати потрібний E-mail
+	$mail->setFrom('info@global-tc.pl', 'AuOreTrade'); // Вказати потрібний E-mail
 	//Кому відправити
-	$mail->addAddress('info@auoretrade.com'); // Вказати потрібний E-mail
+	$mail->addAddress('info@global-tc.pl'); // Вказати потрібний E-mail
 	//Тема листа
 	$mail->Subject = 'AuOreTrade';
 
